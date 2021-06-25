@@ -121,20 +121,25 @@ section {
 
 a {
   position: absolute;
+  display:block;
+  width: 40px;
+  height: 40px;
   font-size:2rem;
-  transition: 300ms
+  transition: 300ms;
+  transform-origin: center;
+  cursor: pointer;
 }
 a.avancar {
   top: 50%;
-  right: 25px;
+  right: 40px;
 }
 a.voltar {
   top: 50%;
-  left: 25px;
+  left: 40px;
 }
 
-a:hover{
-    transform: scale(2)
+a:hover, #fechar-modal:hover{
+    transform: scale(1.5)
 }
 
 .img-modal-container {
@@ -167,6 +172,8 @@ a:hover{
   width: 40px;
   height: 40px;
   font-size: 2rem;
+  transition: 300ms;
+  cursor: pointer;
 }
 
 .options {

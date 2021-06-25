@@ -38,11 +38,10 @@ cards.forEach((trigger) =>
 
 document.querySelector("#fechar-modal").addEventListener("click", x=> modal.style.display = "none")
 
-document.getElementById("avancar").addEventListener("click", ()=> mudarFoto(+1))
+document.getElementById("avancar").addEventListener("click", ()=> mudarFoto(1))
 document.getElementById("voltar").addEventListener("click", ()=> mudarFoto(-1))
 
 function mudarFoto(n){
-  console.log(`entrou ${n} e ${currentIndex}`)
   currentIndex += n;
   if(currentIndex >= paths.length){
     currentIndex = 0
@@ -50,7 +49,6 @@ function mudarFoto(n){
   if(currentIndex < 0){
     currentIndex = paths.length-1;
   }
-  console.log(currentIndex)
   abrirImgModal(currentIndex)
 }
 
