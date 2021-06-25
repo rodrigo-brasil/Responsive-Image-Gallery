@@ -1,112 +1,182 @@
-*{
-    margin : 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-
-body{    
-    background-color: #747474;
+body {
+  background-color: #747474;
 }
 
-
-header{
-    max-height: 8vh;
-    min-height: 80px;
-    background-color: #353535;
-    margin-bottom: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header {
+  max-height: 8vh;
+  min-height: 80px;
+  background-color: #353535;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header>h2{
-    color: white;
-    font-size: 2rem;
+header > h2 {
+  color: white;
+  font-size: 2rem;
 }
 
-.card{
-    font-size: 3rem;
-    color: #ffff;
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid white;
-    transition: all 500ms;
-    background-color: #353535;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: cover;
-    padding-bottom: calc(9/16 * 100%);
-    overflow: hidden;
+.card {
+  font-size: 3rem;
+  color: #ffff;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid white;
+  transition: all 500ms;
+  background-color: #353535;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: calc(9 / 16 * 100%);
+  overflow: hidden;
 }
 
-.card:hover{
-    transform: scale(1.1);
-    opacity: 1;
-    z-index: 10;
+.card:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  z-index: 10;
 }
 
-section{
-    position: relative;
-    height: 100%;    
+section {
+  position: relative;
+  height: 100%;
 }
 
-.img{
-    width: 100%;
-    padding-bottom: 100vh;
-    position: absolute;
-    top:-30px;
-    left: 0;
-    z-index: -1;
-    background-position: center;
-    background-repeat: repeat-y;
-    background-size: cover;
-    filter: blur(8px);
-    overflow: hidden;
+.img {
+  width: 100%;
+  padding-bottom: 100vh;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  z-index: -1;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  filter: blur(8px);
+  overflow: hidden;
 }
 
-
-.grid{
-    margin: 1.5%;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(4, minmax(325px, 1fr));
-    align-content: start; 
-    justify-items: center;
-    z-index: 1;
+.flex {
+  display: flex;
 }
-.grid:hover > *{
-opacity: 0.3;
+.grid {
+  margin: 1.5%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(325px, 1fr));
+  align-content: start;
+  justify-items: center;
+  z-index: 1;
 }
-.card:hover{
-    opacity: 1;
-    z-index: 10;
+.grid:hover > * {
+  opacity: 0.3;
+}
+.card:hover {
+  opacity: 1;
+  z-index: 10;
 }
 
 #background {
-    background: no-repeat center center fixed;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    filter: blur(10px);
+  background: no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(10px);
 }
 
-@media screen and (max-width:1440px) {
-    .grid{
+#modalInstance {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: hsla(0, 0%, 0%, 0.9); /* Black w/ opacity */
+  padding-top: 25px;
+  color: white;
+}
+
+.content {
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+}
+
+a {
+  position: absolute;
+  font-size:2rem;
+  transition: 300ms
+}
+a.avancar {
+  top: 50%;
+  right: 25px;
+}
+a.voltar {
+  top: 50%;
+  left: 25px;
+}
+
+a:hover{
+    transform: scale(2)
+}
+
+.img-modal-container {
+  flex: 1 1 auto;
+  overflow: hidden;
+  height: 100%;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+#img-modal {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  object-fit: contain;
+}
+
+#external-modal {
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.8rem;
+}
+#fechar-modal {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+  .grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
+  }
 }
-
- 
-
-
-

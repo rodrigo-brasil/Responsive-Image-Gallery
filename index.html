@@ -1,37 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- main js -->
     <script src="./js/main.js" defer></script>
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/0f7ed121de.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Grid</title>
-</head>
-<body>
-    <header><h2>Responsive Image Gallery</h2></header>
+  </head>
+  <body>
     <div id="background"></div>
-    <section >
-        <div class="grid">
-            <div class="card" style="background-image:url('images/abaddon1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/broodmother1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/crystal_maiden1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/deathprophet1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/jakiro1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/lina1920x1080-1.jpg')"></div>
-            <div class="card" style="background-image:url('images/lycan1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/necrophos1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/omniknight1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/oracle1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/qop1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/undying1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/vengeful_spirit1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/viper1920x1080.jpg')"></div>
-            <div class="card" style="background-image:url('images/wallpaper_snapfire_large.png')"></div>
-            <div class="card" style="background-image:url('images/witch_doctor1920x1080.jpg')"></div>
+    <header><h2>Responsive Image Gallery</h2></header>
 
+    <div class="modalInstance" id="modalInstance">
+
+        <div class="options" id="external-modal"><i class="fas fa-external-link-alt"></i></div>
+        <div class="option" id="fechar-modal"><i class="fas fa-times"></i></div>
+        <a class="avancar" id="avancar"><i class="fas fa-angle-right"></i></a>
+        <a class="voltar" id="voltar"><i class="fas fa-angle-left"></i></a>
+
+      <div class="flex content">
+        <div class="img-modal-container flex">
+          <img src="" alt="" id="img-modal" />
         </div>
-    </section>
+      </div>
+    </div> <!-- modalInstance -->
 
-</body>
+    <section>
+      <div class="grid">
+        <div
+          class="card"
+          style="background-image: url('./images/abaddon1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/broodmother1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/crystal_maiden1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/deathprophet1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/jakiro1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/lina1920x1080-1.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/lycan1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/necrophos1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/omniknight1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('images/oracle1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/qop1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/undying1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/vengeful_spirit1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/viper1920x1080.jpg')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/wallpaper_snapfire_large.png')"
+        ></div>
+        <div
+          class="card"
+          style="background-image: url('./images/witch_doctor1920x1080.jpg')"
+        ></div>
+      </div>
+      <!-- grid -->
+    </section>
+  </body>
 </html>
